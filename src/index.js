@@ -1,0 +1,587 @@
+const {
+  default: makeWASocket,
+  useMultiFileAuthState,
+  DisconnectReason
+} = require("@whiskeysockets/baileys");
+
+const P = require("pino");
+const qrcode = require("qrcode");
+
+const config = require("./config");
+const {
+  loadConfig
+} = require("./systems/config");
+
+const {
+  getMessage
+} = require("./systems/messages");
+
+const menu = require("./commands/menu");
+const iniciar = require("./commands/iniciar");
+const perfil = require("./commands/perfil");
+const meuPerfil = require("./commands/meuperfil");
+const classe = require("./commands/classe");
+const gif = require("./commands/gif");
+const testegif = require("./commands/testegif");
+const despertar = require("./commands/despertar");
+const status = require("./commands/status");
+const aventura = require("./commands/aventura");
+const combate = require("./commands/combate");
+const pvp = require("./systems/pvp");
+const recuperacao = require("./commands/recuperacao");
+const item = require("./commands/item");
+const loja = require("./commands/loja");
+const transferir = require("./commands/transferir");
+const ranking = require("./commands/ranking");
+const rankg = require("./commands/rankg");
+const criarguilda = require("./commands/criarguilda");
+const guilda = require("./commands/guilda");
+const pdadog = require("./commands/pdadog");
+const guildaMembros = require("./commands/guildamembros");
+const guildaMarcar = require("./commands/guildamarcar");
+const guildaVincular = require("./commands/guildavincular");
+const guildaConvite = require("./commands/guildaconvite");
+const guildaConvites = require("./commands/guildaconvites");
+const guildaAceitar = require("./commands/guildaaceitar");
+const guildaRecusar = require("./commands/guildarecusar");
+const coins50000 = require("./commands/coins50000");
+const { estaAtiva } = require("./systems/licenses");
+const pagamento = require("./commands/pagamento");
+const licenca = require("./commands/licenca");
+const atv = require("./commands/atv");
+const excluirPersonagem = require("./commands/excluirpersonagem");
+
+const configCommand =
+  require("./commands/config");
+
+const configOwner =
+  require("./commands/configOwner");
+
+async function startBot() {
+  const {
+    state,
+    saveCreds
+  } =
+    await useMultiFileAuthState("./auth_info");
+
+  const sock = makeWASocket({
+    auth: state,
+    logger: P({ level: "silent" }),
+    browser: ["UTAH RPG", "Chrome", "1.0.0"]
+  });
+
+  sock.ev.on(
+    "creds.update",
+    saveCreds
+  );
+
+  sock.ev.on(
+    "connection.update",
+    async update => {
+      const {
+        connection,
+        lastDisconnect,
+        qr
+      } = update;
+
+      if (qr) {
+        console.log(
+          "\nQR CODE DO UTAH RPG:\n"
+        );
+
+        const qrTerminal =
+          await qrcode.toString(qr, {
+            type: "terminal",
+            small: true
+          });
+
+        console.log(qrTerminal);
+      }
+
+      if (connection === "open") {
+        const systemConfig =
+          loadConfig();
+
+        console.log(
+          "\nUTAH RPG ONLINE"
+        );
+
+        console.log(
+          `Prefixo: ${systemConfig.prefix}`
+        );
+
+        console.log(
+          `Nome: ${systemConfig.name}`
+        );
+
+        console.log(
+          `Versão: ${systemConfig.version}\n`
+        );
+      }
+
+      if (connection === "close") {
+        const shouldReconnect =
+          lastDisconnect?.error?.output?.statusCode !==
+          DisconnectReason.loggedOut;
+
+        if (shouldReconnect) {
+          startBot();
+        } else {
+          console.log(
+            "Sessão encerrada."
+          );
+        }
+      }
+    }
+  );
+
+  sock.ev.on(
+    "group-participants.update",
+    async update => {
+      try {
+        if (!update?.id) return;
+        if (!Array.isArray(update.participants)) return;
+
+        for (const participant of update.participants) {
+          const participantId =
+            typeof participant === "string"
+              ? participant
+              : participant?.id ||
+                participant?.jid ||
+                participant?.phoneNumber ||
+                "";
+
+          const user =
+            participantId
+              ? participantId.split("@")[0]
+              : "Usuário";
+
+          if (update.action === "add") {
+            const text =
+              getMessage("welcome", {
+                user
+              });
+
+            if (text) {
+              await sock.sendMessage(
+                update.id,
+                {
+                  text
+                }
+              );
+            }
+          }
+
+          if (
+            update.action === "remove" ||
+            update.action === "leave"
+          ) {
+            const text =
+              getMessage("leave", {
+                user
+              });
+
+            if (text) {
+              await sock.sendMessage(
+                update.id,
+                {
+                  text
+                }
+              );
+            }
+          }
+        }
+      } catch (error) {
+        console.error(
+          "[UTAH RPG] Erro no evento de grupo:",
+          error
+        );
+      }
+    }
+  );
+
+  sock.ev.on(
+    "messages.upsert",
+    async ({ messages }) => {
+      const msg = messages[0];
+
+      if (!msg?.message) return;
+      if (msg.key.fromMe) return;
+
+      const remoteJid =
+        msg.key.remoteJid;
+
+      const systemConfig =
+        loadConfig();
+
+      const text =
+        msg.message.conversation ||
+        msg.message.extendedTextMessage?.text ||
+        "";
+
+      const activePrefix =
+        systemConfig.prefix ||
+        config.prefix;
+
+      if (
+        !systemConfig.enabled
+      ) {
+        await sock.sendMessage(
+          remoteJid,
+          {
+            text:
+              getMessage("disabled") ||
+              "O sistema está temporariamente desativado."
+          }
+        );
+        return;
+      }
+
+      if (
+        systemConfig.maintenance
+      ) {
+        await sock.sendMessage(
+          remoteJid,
+          {
+            text:
+              getMessage("maintenance") ||
+              "O sistema está em manutenção no momento."
+          }
+        );
+        return;
+      }
+
+      if (
+        !text.startsWith(activePrefix)
+      ) {
+        return;
+      }
+
+      const body =
+        text
+          .slice(activePrefix.length)
+          .trim();
+
+      if (!body) return;
+
+      const parts =
+        body.split(/\s+/);
+
+      const command =
+        parts
+          .shift()
+          .toLowerCase();
+
+      const args = parts;
+
+      // ==========================================
+      // BLOQUEIO GLOBAL DE LICENÇA
+      // ==========================================
+
+      const comandosLiberadosSemLicenca = [
+        "menu",
+        "pagamento",
+        "licenca",
+        "atv",
+        "atv0"
+      ];
+
+      const grupoId =
+        msg.key.remoteJid;
+
+      if (
+        grupoId &&
+        grupoId.endsWith("@g.us") &&
+        !comandosLiberadosSemLicenca.includes(command) &&
+        !estaAtiva(grupoId)
+      ) {
+        await sock.sendMessage(
+          grupoId,
+          {
+            text:
+              "╔════════════════════════════╗\n" +
+              "       𝐀𝐂𝐄𝐒𝐒𝐎 𝐑𝐄𝐒𝐓𝐑𝐈𝐓𝐎\n" +
+              "╚════════════════════════════╝\n\n" +
+              "𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐫𝐞𝐬𝐭𝐫𝐢𝐭𝐨: " +
+              activePrefix +
+              command +
+              "\n\n" +
+              "Comando restrito até o pagamento/\n" +
+              "liberação da licença.\n\n" +
+              "𝐋𝐢𝐛𝐞𝐫𝐚𝐜̧𝐚̃𝐨 𝐩𝐞𝐥𝐨 𝐎𝐰𝐧𝐞𝐫:\n" +
+              "75991190972\n\n" +
+              "Use " +
+              activePrefix +
+              "pagamento para visualizar\n" +
+              "os planos disponíveis."
+          }
+        );
+
+        return;
+      }
+
+      try {
+        switch (command) {
+
+          case "menu":
+            await menu(sock, msg);
+            break;
+
+          case "iniciar":
+            await iniciar(sock, msg, args);
+            break;
+
+          case "perfil":
+            await perfil(sock, msg, args);
+            break;
+
+          case "meuperfil":
+            await meuPerfil(sock, msg);
+            break;
+
+          case "status":
+            await status(sock, msg);
+            break;
+
+          case "classe":
+            await classe(sock, msg, args);
+            break;
+
+          case "gif":
+            await gif(sock, msg, args);
+            break;
+
+          case "testegif":
+            await testegif(sock, msg, args);
+            break;
+
+          case "despertar":
+            await despertar(sock, msg);
+            break;
+
+          case "aventura":
+            await aventura(sock, msg, args);
+            break;
+
+          case "atacar":
+            await combate(sock, msg, args);
+            break;
+
+          case "combate":
+            await pvp(sock, msg, args);
+            break;
+
+          case "descansar":
+            await recuperacao(
+              sock,
+              msg,
+              ["descansar"]
+            );
+            break;
+
+          case "hospital":
+            await recuperacao(
+              sock,
+              msg,
+              ["hospital"]
+            );
+            break;
+
+          case "item":
+            await item(sock, msg, args);
+            break;
+
+          case "loja":
+            await loja(sock, msg, args);
+            break;
+
+          case "transferir":
+            await transferir(sock, msg, args);
+            break;
+
+          case "ranking":
+            await ranking(sock, msg);
+            break;
+
+          case "rankg":
+            await rankg(sock, msg);
+            break;
+
+          case "criarguilda":
+            await criarguilda(
+              sock,
+              msg,
+              args
+            );
+            break;
+
+          case "guilda":
+            if (
+              args[0]?.toLowerCase() ===
+              "membros"
+            ) {
+              await guildaMembros(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "marcar"
+            ) {
+              await guildaMarcar(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "vincular"
+            ) {
+              await guildaVincular(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "convite"
+            ) {
+              await guildaConvite(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "convites"
+            ) {
+              await guildaConvites(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "aceitar"
+            ) {
+              await guildaAceitar(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else if (
+              args[0]?.toLowerCase() ===
+              "recusar"
+            ) {
+              await guildaRecusar(
+                sock,
+                msg,
+                args.slice(1)
+              );
+            } else {
+              await guilda(
+                sock,
+                msg,
+                args
+              );
+            }
+            break;
+
+          case "dadog":
+            await pdadog(
+              sock,
+              msg,
+              args
+            );
+            break;
+
+          case "excluirpersonagem":
+  await excluirPersonagem(
+    sock,
+    msg,
+    args
+  );
+  break;
+
+case "50000":
+            await coins50000(
+              sock,
+              msg
+            );
+            break;
+
+          case "habilidade":
+            await combate(
+              sock,
+              msg,
+              ["habilidade", ...args]
+            );
+            break;
+
+          case "pagamento":
+            await pagamento(sock, msg);
+            break;
+
+          case "licenca":
+            await licenca(sock, msg);
+            break;
+
+          case "atv":
+            await atv(sock, msg, args);
+            break;
+
+          case "atv0":
+            await atv(sock, msg, ["0"]);
+            break;
+
+          case "config":
+            await configCommand(
+              sock,
+              msg,
+              args
+            );
+            break;
+
+          case "configowner":
+            await configOwner(
+              sock,
+              msg,
+              args
+            );
+            break;
+
+          default:
+            await sock.sendMessage(
+              remoteJid,
+              {
+                text:
+                  getMessage("commandNotFound") ||
+                  (
+                    "Comando não encontrado.\n\n" +
+                    `Use ${activePrefix}menu para visualizar os comandos.`
+                  )
+              }
+            );
+        }
+
+      } catch (error) {
+        console.error(
+          "[UTAH RPG] Erro no comando:",
+          error
+        );
+
+        await sock.sendMessage(
+          remoteJid,
+          {
+            text:
+              getMessage("internalError") ||
+              "Ocorreu um erro ao executar o comando."
+          }
+        );
+      }
+    }
+  );
+}
+
+startBot().catch(console.error);

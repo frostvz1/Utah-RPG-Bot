@@ -1,0 +1,80 @@
+{
+  "UTAH-G-0001": {
+    "id": "UTAH-G-0001",
+    "name": "𝐴𝑢𝑟𝑜𝑟𝑎 𝑉𝑒𝑟𝑚𝑒𝑙ℎ𝑎",
+    "image": {
+      "file": "/data/data/com.termux/files/home/UTAH-RPG/media/guilds/guild_UTAH-G-0001.jpg",
+      "type": "jpg",
+      "mimetype": "image/jpeg",
+      "updatedAt": 1788751287306
+    },
+    "creator": {
+      "id": "144272766541980@lid",
+      "name": "Utah Frost",
+      "contact": "144272766541980"
+    },
+    "groupId": "120363401056423932@g.us",
+    "description": "𝑈𝑚 𝑔𝑟𝑢𝑝𝑜 𝑟𝑒𝑏𝑒𝑙𝑎𝑑𝑜 𝑐𝑜𝑛𝑡𝑟𝑎 𝑜 𝑠𝑖𝑠𝑡𝑒𝑚𝑎 𝑞𝑢𝑒 𝑎𝑓𝑙𝑖𝑛𝑔𝑒 𝑎 𝑚𝑒𝑛𝑡𝑒 𝑑𝑜𝑠 𝑚𝑎𝑖𝑠 𝑓𝑟𝑎𝑐𝑜𝑠",
+    "motto": "𝑉𝑒𝑟𝑚𝑒𝑙ℎ𝑜𝑠 𝑐𝑜𝑚𝑜 𝑎 𝑎𝑢𝑟𝑜𝑟𝑎",
+    "category": "Aventureiros",
+    "level": 1,
+    "xp": 0,
+    "maxMembers": 30,
+    "coins": 0,
+    "victories": 0,
+    "defeats": 0,
+    "completedMissions": 0,
+    "territories": [],
+    "invites": [],
+    "members": [
+      {
+        "id": "144272766541980@lid",
+        "name": "Utah Frost",
+        "contact": "144272766541980",
+        "role": "Mestre",
+        "joinedAt": 1788751030137
+      },
+      {
+        "id": "264930880131120@lid",
+        "name": "para começar",
+        "contact": "264930880131120@lid",
+        "role": "Recruta",
+        "joinedAt": 1788751511798
+      }
+    ],
+    "createdAt": 1788751030137
+  },
+  "UTAH-G-0002": {
+    "id": "UTAH-G-0002",
+    "name": "foxdragon",
+    "image": null,
+    "creator": {
+      "id": "214185875140725@lid",
+      "name": "featris",
+      "contact": "214185875140725"
+    },
+    "groupId": "120363401056423932@g.us",
+    "description": "",
+    "motto": "",
+    "category": "Aventureiros",
+    "level": 1,
+    "xp": 0,
+    "maxMembers": 30,
+    "coins": 0,
+    "victories": 0,
+    "defeats": 0,
+    "completedMissions": 0,
+    "territories": [],
+    "invites": [],
+    "members": [
+      {
+        "id": "214185875140725@lid",
+        "name": "featris",
+        "contact": "214185875140725",
+        "role": "Mestre",
+        "joinedAt": 1788827257824
+      }
+    ],
+    "createdAt": 1788827257824
+  }
+}

@@ -1,0 +1,749 @@
+const {
+  getUser,
+  updateUser
+} = require("./users");
+
+const {
+  getHabilidades
+} = require("./abilities");
+
+const {
+  sendGifMessage,
+  sendAbilityGifMessage
+} = require("./gifEvents");
+
+function random(min, max) {
+  return Math.floor(
+    Math.random() * (max - min + 1)
+  ) + min;
+}
+
+function obterId(msg) {
+  return (
+    msg.key.participant ||
+    msg.key.remoteJid
+  );
+}
+
+function normalizarId(id) {
+  if (!id) return "";
+  return String(id)
+    .replace(/[^0-9]/g, "");
+}
+
+function obterMencao(args) {
+  for (const arg of args) {
+    if (String(arg).startsWith("@")) {
+      return String(arg).replace("@", "");
+    }
+  }
+
+  return null;
+}
+
+function encontrarUsuarioPorNumero(numero) {
+  const alvo = normalizarId(numero);
+
+  if (!alvo) return null;
+
+  const users = require("./users").loadUsers();
+
+  for (const [id, user] of Object.entries(users)) {
+    if (
+      normalizarId(id) === alvo ||
+      normalizarId(user.id) === alvo
+    ) {
+      return id;
+    }
+  }
+
+  return null;
+}
+
+function encontrarHabilidade(user, nome) {
+  if (!user?.race) return null;
+
+  const habilidades =
+    getHabilidades(user.race) || [];
+
+  const termo =
+    String(nome || "")
+      .trim()
+      .toLowerCase();
+
+  if (!termo) return null;
+
+  const numero = Number(termo);
+
+  if (
+    Number.isInteger(numero) &&
+    numero >= 1 &&
+    numero <= habilidades.length
+  ) {
+    return habilidades[numero - 1];
+  }
+
+  return habilidades.find(
+    habilidade =>
+      String(habilidade.nome)
+        .toLowerCase() === termo
+  ) || null;
+}
+
+function custoHabilidade(habilidade) {
+  const custos = {
+    "Comum": 10,
+    "Incomum": 15,
+    "Rara": 20,
+    "Épica": 25,
+    "Lendária": 30,
+    "Mítica": 35
+  };
+
+  return custos[habilidade?.raridade] || 20;
+}
+
+function calcularAtaque(user) {
+  return Math.max(
+    1,
+    user.strength +
+    user.speed +
+    random(3, 10) +
+    Math.floor(user.level / 3)
+  );
+}
+
+function calcularHabilidade(user, habilidade) {
+  const tipo =
+    String(habilidade.tipo || "")
+      .toLowerCase();
+
+  let dano = 0;
+  let cura = 0;
+  let defesa = 0;
+  let reducao = 0;
+
+  if (tipo === "ofensiva") {
+    dano =
+      user.strength +
+      user.speed +
+      random(8, 18) +
+      Math.floor(user.level / 3);
+  }
+
+  else if (tipo === "mágica" || tipo === "magica") {
+    dano =
+      user.intelligence * 2 +
+      random(10, 22) +
+      Math.floor(user.level / 2);
+  }
+
+  else if (tipo === "defensiva") {
+    dano =
+      Math.max(
+        1,
+        Math.floor(user.strength / 2) +
+        random(2, 7)
+      );
+
+    defesa =
+      5 +
+      Math.floor(user.level / 4);
+  }
+
+  else if (tipo === "suporte") {
+    cura =
+      15 +
+      user.intelligence +
+      random(5, 15);
+
+    dano =
+      Math.max(
+        1,
+        Math.floor(user.strength / 2) +
+        random(2, 6)
+      );
+  }
+
+  else if (tipo === "controle") {
+    dano =
+      user.intelligence +
+      random(5, 12);
+
+    reducao =
+      3 +
+      Math.floor(user.level / 5);
+  }
+
+  else if (tipo === "transformação" || tipo === "transformacao") {
+    dano =
+      user.strength * 2 +
+      user.speed +
+      random(10, 20);
+
+    defesa =
+      3 +
+      Math.floor(user.level / 3);
+  }
+
+  else {
+    dano =
+      user.strength +
+      user.intelligence +
+      random(5, 15);
+  }
+
+  return {
+    dano: Math.max(0, dano),
+    cura,
+    defesa,
+    reducao
+  };
+}
+
+function criarPvP(id1, id2) {
+  return {
+    active: true,
+    type: "pvp",
+    player1: id1,
+    player2: id2,
+    turn: id1,
+    defense1: 0,
+    defense2: 0,
+    reduction1: 0,
+    reduction2: 0,
+    createdAt: Date.now()
+  };
+}
+
+function outroJogador(combat, id) {
+  if (combat.player1 === id) {
+    return combat.player2;
+  }
+
+  return combat.player1;
+}
+
+function estaNoPvp(user, id) {
+  return Boolean(
+    user?.combat?.active &&
+    user.combat.type === "pvp" &&
+    (
+      user.combat.player1 === id ||
+      user.combat.player2 === id
+    )
+  );
+}
+
+async function enviarInicio(
+  sock,
+  msg,
+  id1,
+  id2,
+  user1,
+  user2
+) {
+  const texto =
+    "╔════════════════════════════╗\n" +
+    "           PVP\n" +
+    "╚════════════════════════════╝\n\n" +
+    `${user1.name || "Jogador"} VS ${user2.name || "Jogador"}\n\n` +
+    `${user1.name || "Jogador"}\n` +
+    `HP: ${user1.hp}/${user1.maxHp}\n` +
+    `Energia: ${user1.energy}/${user1.maxEnergy}\n\n` +
+    `${user2.name || "Jogador"}\n` +
+    `HP: ${user2.hp}/${user2.maxHp}\n` +
+    `Energia: ${user2.energy}/${user2.maxEnergy}\n\n` +
+    "COMBATE INICIADO\n\n" +
+    `É a vez de ${user1.name || "Jogador"}.\n\n` +
+    "Ataque com:\n" +
+    ";combate @oponente\n\n" +
+    "Use habilidade com:\n" +
+      ";combate @oponente habilidade 1";
+
+  return sendGifMessage(
+    sock,
+    msg,
+    "atacar",
+    texto
+  );
+}
+
+async function iniciarDesafio(
+  sock,
+  msg,
+  id1,
+  id2
+) {
+  if (!id2 || id1 === id2) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Você não pode lutar contra si mesmo."
+    );
+  }
+
+  const user1 = getUser(id1);
+  const user2 = getUser(id2);
+
+  if (!user1.registered) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Você precisa criar um personagem antes de lutar."
+    );
+  }
+
+  if (!user2.registered) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "O jogador desafiado ainda não possui um personagem."
+    );
+  }
+
+  if (estaNoPvp(user1, id1)) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Você já está em um combate PvP."
+    );
+  }
+
+  if (estaNoPvp(user2, id2)) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Esse jogador já está em um combate PvP."
+    );
+  }
+
+  const combate = criarPvP(id1, id2);
+
+  updateUser(id1, {
+    combat: combate
+  });
+
+  updateUser(id2, {
+    combat: combate
+  });
+
+  return enviarInicio(
+    sock,
+    msg,
+    id1,
+    id2,
+    user1,
+    user2
+  );
+}
+
+async function executarAtaque(
+  sock,
+  msg,
+  id,
+  alvoId,
+  args
+) {
+  const user = getUser(id);
+  const alvo = getUser(alvoId);
+
+  if (!estaNoPvp(user, id)) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Você não está em um combate PvP."
+    );
+  }
+
+  if (
+    !user.combat ||
+    user.combat.type !== "pvp"
+  ) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Combate PvP inválido."
+    );
+  }
+
+  const combat = user.combat;
+
+  if (combat.turn !== id) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Não é a sua vez de atacar."
+    );
+  }
+
+  if (
+    alvoId !== outroJogador(combat, id)
+  ) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Esse jogador não é seu oponente atual."
+    );
+  }
+
+  const usarHabilidade =
+    args[1]?.toLowerCase() === "habilidade";
+
+  let dano = 0;
+  let cura = 0;
+  let defesa = 0;
+  let reducao = 0;
+  let habilidade = null;
+  let energiaGasta = 0;
+
+  if (usarHabilidade) {
+    const nome =
+      args.slice(2).join(" ");
+
+    habilidade =
+      encontrarHabilidade(
+        user,
+        nome
+      );
+
+    if (!habilidade) {
+      return sendGifMessage(
+        sock,
+        msg,
+        "erro",
+        "Habilidade não encontrada.\n\n" +
+        "Use o número ou o nome exato da habilidade."
+      );
+    }
+
+    energiaGasta =
+      custoHabilidade(habilidade);
+
+    if (user.energy < energiaGasta) {
+      return sendGifMessage(
+        sock,
+        msg,
+        "erro",
+        `Energia insuficiente.\n\n` +
+        `Necessário: ${energiaGasta}\n` +
+        `Atual: ${user.energy}`
+      );
+    }
+
+    const resultado =
+      calcularHabilidade(
+        user,
+        habilidade
+      );
+
+    dano = resultado.dano;
+    cura = resultado.cura;
+    defesa = resultado.defesa;
+    reducao = resultado.reducao;
+  } else {
+    dano = calcularAtaque(user);
+  }
+
+  const critico =
+    Math.random() < 0.12;
+
+  if (critico) {
+    dano *= 2;
+  }
+
+  const alvoDefesa =
+    alvoId === combat.player1
+      ? combat.defense1
+      : combat.defense2;
+
+  const alvoReducao =
+    alvoId === combat.player1
+      ? combat.reduction1
+      : combat.reduction2;
+
+  const danoFinal =
+    Math.max(
+      1,
+      dano -
+      alvo.defense -
+      alvoDefesa -
+      0
+    );
+
+  const novoHp =
+    Math.max(
+      0,
+      alvo.hp - danoFinal
+    );
+
+  const novoHpUsuario =
+    Math.min(
+      user.maxHp,
+      user.hp + cura
+    );
+
+  const novaEnergia =
+    Math.max(
+      0,
+      user.energy - energiaGasta
+    );
+
+  if (novoHp <= 0) {
+    updateUser(id, {
+      hp: novoHpUsuario,
+      energy: novaEnergia,
+      combat: null
+    });
+
+    updateUser(alvoId, {
+      hp: 0,
+      combat: null
+    });
+
+    const titulo =
+      habilidade
+        ? `HABILIDADE: ${habilidade.nome}`
+        : "ATAQUE";
+
+    const texto =
+      "╔════════════════════════════╗\n" +
+      "           VITÓRIA\n" +
+      "╚════════════════════════════╝\n\n" +
+      `Vencedor: ${user.name || "Jogador"}\n` +
+      `Derrotado: ${alvo.name || "Jogador"}\n\n` +
+      `${titulo}\n` +
+      `Dano causado: ${danoFinal}\n` +
+      (critico ? "CRÍTICO!\n" : "") +
+      `\nHP final: ${novoHpUsuario}/${user.maxHp}\n` +
+      `Energia: ${novaEnergia}/${user.maxEnergy}`;
+
+    if (habilidade) {
+      return sendAbilityGifMessage(
+        sock,
+        msg,
+        user.race,
+        texto
+      );
+    }
+
+    return sendGifMessage(
+      sock,
+      msg,
+      "vitoria",
+      texto
+    );
+  }
+
+  const novoCombat =
+    {
+      ...combat,
+      turn: alvoId,
+      defense1:
+        combat.player1 === id
+          ? defesa
+          : combat.defense1,
+      defense2:
+        combat.player2 === id
+          ? defesa
+          : combat.defense2,
+      reduction1:
+        combat.player1 === id
+          ? reducao
+          : combat.reduction1,
+      reduction2:
+        combat.player2 === id
+          ? reducao
+          : combat.reduction2
+    };
+
+  updateUser(id, {
+    hp: novoHpUsuario,
+    energy: novaEnergia,
+    combat: novoCombat
+  });
+
+  updateUser(alvoId, {
+    hp: novoHp,
+    combat: novoCombat
+  });
+
+  const titulo =
+    habilidade
+      ? `HABILIDADE: ${habilidade.nome}`
+      : "ATAQUE";
+
+  const texto =
+    "╔════════════════════════════╗\n" +
+    "             PVP\n" +
+    "╚════════════════════════════╝\n\n" +
+    `${titulo}\n\n` +
+    `${user.name || "Jogador"} atacou ${alvo.name || "Jogador"}.\n` +
+    `Dano: ${danoFinal}\n` +
+    (critico ? "CRÍTICO!\n" : "") +
+    (cura ? `HP recuperado: +${cura}\n` : "") +
+    (energiaGasta ? `Energia usada: ${energiaGasta}\n` : "") +
+    "\n" +
+    `${user.name || "Jogador"}: ${novoHpUsuario}/${user.maxHp} HP\n` +
+    `${alvo.name || "Jogador"}: ${novoHp}/${alvo.maxHp} HP\n\n` +
+    `Agora é a vez de ${alvo.name || "Jogador"}.\n\n` +
+    `Use ;combate @${normalizarId(id)} para atacar.`;
+
+  if (habilidade) {
+    return sendAbilityGifMessage(
+      sock,
+      msg,
+      user.race,
+      texto
+    );
+  }
+
+  return sendGifMessage(
+    sock,
+    msg,
+    "atacar",
+    texto
+  );
+}
+
+async function pvp(sock, msg, args) {
+  const id = obterId(msg);
+
+  /*
+   * Primeiro tenta pegar a menção real do WhatsApp.
+   * Isso é mais confiável que ler apenas "@número" dos argumentos.
+   */
+  const contexto =
+    msg.message?.extendedTextMessage?.contextInfo ||
+    msg.message?.imageMessage?.contextInfo ||
+    msg.message?.videoMessage?.contextInfo ||
+    {};
+
+  const mencionados =
+    contexto.mentionedJid || [];
+
+  let alvoId = null;
+
+  if (mencionados.length > 0) {
+    alvoId = encontrarUsuarioPorNumero(
+      mencionados[0]
+    );
+  }
+
+  /*
+   * Fallback para comandos escritos manualmente:
+   * ;combate @5511999999999
+   */
+  if (!alvoId) {
+    const numero =
+      obterMencao(args);
+
+    if (numero) {
+      alvoId =
+        encontrarUsuarioPorNumero(
+          numero
+        );
+    }
+  }
+
+  if (!alvoId) {
+    return sendGifMessage(
+      sock,
+      msg,
+      "erro",
+      "Uso correto:\n\n" +
+      ";combate @usuario\n\n" +
+      "Para habilidade:\n" +
+      ";combate @usuario habilidade 1"
+    );
+  }
+
+  /*
+   * Impede atacar alguém que não esteja
+   * no mesmo grupo.
+   */
+  const grupoId =
+    msg.key.remoteJid;
+
+  if (
+    grupoId &&
+    grupoId.endsWith("@g.us")
+  ) {
+    try {
+      const metadata =
+        await sock.groupMetadata(
+          grupoId
+        );
+
+      const participantes =
+        metadata.participants || [];
+
+      const alvoNormalizado =
+        normalizarId(alvoId);
+
+      const alvoNoGrupo =
+        participantes.some(
+          participante =>
+            normalizarId(
+              participante.id
+            ) === alvoNormalizado
+        );
+
+      if (!alvoNoGrupo) {
+        return sendGifMessage(
+          sock,
+          msg,
+          "erro",
+          "Esse jogador não está neste grupo."
+        );
+      }
+    } catch (error) {
+      console.error(
+        "Erro ao verificar membros do grupo:",
+        error
+      );
+    }
+  }
+
+  const user =
+    getUser(id);
+
+  /*
+   * Se já estiver em PvP,
+   * o comando passa a ser um ataque.
+   */
+  if (
+    user.combat?.active &&
+    user.combat.type === "pvp"
+  ) {
+    return executarAtaque(
+      sock,
+      msg,
+      id,
+      alvoId,
+      args
+    );
+  }
+
+  /*
+   * Caso ainda não esteja em combate,
+   * inicia o desafio.
+   */
+  return iniciarDesafio(
+    sock,
+    msg,
+    id,
+    alvoId
+  );
+}
+
+module.exports = pvp;

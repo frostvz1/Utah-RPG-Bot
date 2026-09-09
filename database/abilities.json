@@ -1,0 +1,3332 @@
+{
+  "aspectos": {
+    "arcano": "Manipulação de energia mágica, conhecimento oculto e forças místicas.",
+    "divino": "Poderes ligados a entidades superiores, luz sagrada e autoridade celestial.",
+    "sombrio": "Energia das trevas, corrupção, medo e forças ocultas.",
+    "elemental": "Controle e manifestação dos elementos naturais e sobrenaturais.",
+    "celestial": "Energia dos céus, estrelas, luz e forças superiores.",
+    "infernal": "Poderes provenientes de forças demoníacas e dimensões infernais.",
+    "espiritual": "Manipulação de espíritos, energia vital e forças da alma.",
+    "natural": "Conexão com natureza, animais, plantas e forças naturais.",
+    "fisico": "Aprimoramento direto do corpo, força, velocidade e resistência.",
+    "sobrenatural": "Capacidades que ultrapassam limitações naturais.",
+    "psiquico": "Manipulação da mente, percepção, emoções e consciência.",
+    "temporal": "Manipulação do tempo e eventos cronológicos.",
+    "dimensional": "Manipulação de espaços, dimensões e portais.",
+    "cosmico": "Energia relacionada ao universo, estrelas e forças cósmicas."
+  },
+  "racas": {
+    "humano": {
+      "nome": "Humano",
+      "descricao": "Uma raça extremamente adaptável, capaz de desenvolver diferentes caminhos de poder.",
+      "aspectos": [
+        "fisico",
+        "arcano",
+        "espiritual"
+      ]
+    },
+    "elfo": {
+      "nome": "Elfo",
+      "descricao": "Seres ligados à magia, natureza, percepção e forças ancestrais.",
+      "aspectos": [
+        "arcano",
+        "natural",
+        "espiritual"
+      ]
+    },
+    "anjo": {
+      "nome": "Anjo",
+      "descricao": "Seres celestiais ligados à luz, proteção e autoridade divina.",
+      "aspectos": [
+        "divino",
+        "celestial",
+        "espiritual"
+      ]
+    },
+    "demonio": {
+      "nome": "Demônio",
+      "descricao": "Seres ligados às trevas, corrupção, destruição e dimensões infernais.",
+      "aspectos": [
+        "sombrio",
+        "infernal",
+        "sobrenatural"
+      ]
+    },
+    "vampiro": {
+      "nome": "Vampiro",
+      "descricao": "Criaturas noturnas que manipulam sangue, sombras e energia vital.",
+      "aspectos": [
+        "sombrio",
+        "espiritual",
+        "sobrenatural"
+      ]
+    },
+    "lobisomem": {
+      "nome": "Lobisomem",
+      "descricao": "Criaturas bestiais com força, sentidos e regeneração sobrenaturais.",
+      "aspectos": [
+        "fisico",
+        "natural",
+        "sobrenatural"
+      ]
+    },
+    "fada": {
+      "nome": "Fada",
+      "descricao": "Seres mágicos ligados à natureza, encantamentos e energia feérica.",
+      "aspectos": [
+        "arcano",
+        "natural",
+        "espiritual"
+      ]
+    },
+    "dragao": {
+      "nome": "Dragão",
+      "descricao": "Seres ancestrais capazes de dominar elementos e energia cósmica.",
+      "aspectos": [
+        "elemental",
+        "arcano",
+        "cosmico"
+      ]
+    },
+    "deus": {
+      "nome": "Deus",
+      "descricao": "Entidades de poder divino capazes de manipular forças superiores.",
+      "aspectos": [
+        "divino",
+        "celestial",
+        "cosmico"
+      ]
+    },
+    "sobrenatural": {
+      "nome": "Sobrenatural",
+      "descricao": "Entidades que ultrapassam as regras convencionais da realidade.",
+      "aspectos": [
+        "sobrenatural",
+        "dimensional",
+        "psiquico"
+      ]
+    }
+  },
+  "habilidades": {
+    "Humano": [
+      {
+        "id": "humano_1",
+        "nome": "Determinação",
+        "raca": "Humano",
+        "aspectos": [
+          "fisico",
+          "arcano"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Determinação é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Determinação.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "humano_2",
+        "nome": "Adaptabilidade",
+        "raca": "Humano",
+        "aspectos": [
+          "arcano",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Adaptabilidade é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Adaptabilidade.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "humano_3",
+        "nome": "Instinto de Sobrevivência",
+        "raca": "Humano",
+        "aspectos": [
+          "espiritual",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Instinto de Sobrevivência é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Instinto de Sobrevivência.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "humano_4",
+        "nome": "Força de Vontade",
+        "raca": "Humano",
+        "aspectos": [
+          "psiquico",
+          "fisico"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Força de Vontade é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Força de Vontade.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "humano_5",
+        "nome": "Reflexos Humanos",
+        "raca": "Humano",
+        "aspectos": [
+          "fisico",
+          "arcano"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Reflexos Humanos é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Reflexos Humanos.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "humano_6",
+        "nome": "Resistência Natural",
+        "raca": "Humano",
+        "aspectos": [
+          "arcano",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Resistência Natural é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Resistência Natural.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "humano_7",
+        "nome": "Estratégia",
+        "raca": "Humano",
+        "aspectos": [
+          "espiritual",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Estratégia é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Estratégia.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "humano_8",
+        "nome": "Precisão",
+        "raca": "Humano",
+        "aspectos": [
+          "psiquico",
+          "fisico"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Precisão é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Precisão.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "humano_9",
+        "nome": "Contra-Ataque",
+        "raca": "Humano",
+        "aspectos": [
+          "fisico",
+          "arcano"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Contra-Ataque é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Contra-Ataque.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "humano_10",
+        "nome": "Foco Absoluto",
+        "raca": "Humano",
+        "aspectos": [
+          "arcano",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Foco Absoluto é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Foco Absoluto.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "humano_11",
+        "nome": "Evolução Rápida",
+        "raca": "Humano",
+        "aspectos": [
+          "espiritual",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Evolução Rápida é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Evolução Rápida.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "humano_12",
+        "nome": "Espírito de Luta",
+        "raca": "Humano",
+        "aspectos": [
+          "psiquico",
+          "fisico"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Espírito de Luta é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Espírito de Luta.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "humano_13",
+        "nome": "Potencial Oculto",
+        "raca": "Humano",
+        "aspectos": [
+          "fisico",
+          "arcano"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Potencial Oculto é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Potencial Oculto.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "humano_14",
+        "nome": "Ascensão Humana",
+        "raca": "Humano",
+        "aspectos": [
+          "arcano",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Ascensão Humana é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Ascensão Humana.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "humano_15",
+        "nome": "Domínio Marcial",
+        "raca": "Humano",
+        "aspectos": [
+          "espiritual",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Domínio Marcial é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Domínio Marcial.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "humano_16",
+        "nome": "Mente Adaptável",
+        "raca": "Humano",
+        "aspectos": [
+          "psiquico",
+          "fisico"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Mente Adaptável é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Mente Adaptável.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "humano_17",
+        "nome": "Último Esforço",
+        "raca": "Humano",
+        "aspectos": [
+          "fisico",
+          "arcano"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Último Esforço é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Último Esforço.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "humano_18",
+        "nome": "Instinto Guerreiro",
+        "raca": "Humano",
+        "aspectos": [
+          "arcano",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Instinto Guerreiro é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Instinto Guerreiro.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "humano_19",
+        "nome": "Superação",
+        "raca": "Humano",
+        "aspectos": [
+          "espiritual",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Superação é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Superação.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "humano_20",
+        "nome": "Limite Humano",
+        "raca": "Humano",
+        "aspectos": [
+          "psiquico",
+          "fisico"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Limite Humano é uma habilidade exclusiva da raça Humano, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Limite Humano.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Elfo": [
+      {
+        "id": "elfo_1",
+        "nome": "Visão Élfica",
+        "raca": "Elfo",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Visão Élfica é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Visão Élfica.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "elfo_2",
+        "nome": "Passo Silencioso",
+        "raca": "Elfo",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Passo Silencioso é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Passo Silencioso.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "elfo_3",
+        "nome": "Flecha Arcana",
+        "raca": "Elfo",
+        "aspectos": [
+          "espiritual",
+          "celestial"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Flecha Arcana é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Flecha Arcana.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "elfo_4",
+        "nome": "Comunicação Natural",
+        "raca": "Elfo",
+        "aspectos": [
+          "celestial",
+          "arcano"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Comunicação Natural é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Comunicação Natural.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "elfo_5",
+        "nome": "Lâmina Élfica",
+        "raca": "Elfo",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Lâmina Élfica é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Lâmina Élfica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "elfo_6",
+        "nome": "Cura da Floresta",
+        "raca": "Elfo",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Cura da Floresta é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Cura da Floresta.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "elfo_7",
+        "nome": "Percepção Espiritual",
+        "raca": "Elfo",
+        "aspectos": [
+          "espiritual",
+          "celestial"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Percepção Espiritual é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Percepção Espiritual.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "elfo_8",
+        "nome": "Dança das Folhas",
+        "raca": "Elfo",
+        "aspectos": [
+          "celestial",
+          "arcano"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Dança das Folhas é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Dança das Folhas.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "elfo_9",
+        "nome": "Flecha Lunar",
+        "raca": "Elfo",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Flecha Lunar é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Flecha Lunar.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "elfo_10",
+        "nome": "Camuflagem Natural",
+        "raca": "Elfo",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Camuflagem Natural é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Camuflagem Natural.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "elfo_11",
+        "nome": "Raiz Aprisionadora",
+        "raca": "Elfo",
+        "aspectos": [
+          "espiritual",
+          "celestial"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Raiz Aprisionadora é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Raiz Aprisionadora.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "elfo_12",
+        "nome": "Espírito da Floresta",
+        "raca": "Elfo",
+        "aspectos": [
+          "celestial",
+          "arcano"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Espírito da Floresta é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Espírito da Floresta.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "elfo_13",
+        "nome": "Chuva de Flechas",
+        "raca": "Elfo",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Chuva de Flechas é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Chuva de Flechas.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "elfo_14",
+        "nome": "Arco Ancestral",
+        "raca": "Elfo",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Arco Ancestral é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Arco Ancestral.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "elfo_15",
+        "nome": "Sussurro Feérico",
+        "raca": "Elfo",
+        "aspectos": [
+          "espiritual",
+          "celestial"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Sussurro Feérico é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Sussurro Feérico.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "elfo_16",
+        "nome": "Domínio Natural",
+        "raca": "Elfo",
+        "aspectos": [
+          "celestial",
+          "arcano"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Domínio Natural é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Domínio Natural.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "elfo_17",
+        "nome": "Floresta Viva",
+        "raca": "Elfo",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Floresta Viva é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Floresta Viva.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "elfo_18",
+        "nome": "Guardião Élfico",
+        "raca": "Elfo",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Guardião Élfico é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Guardião Élfico.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "elfo_19",
+        "nome": "Essência Ancestral",
+        "raca": "Elfo",
+        "aspectos": [
+          "espiritual",
+          "celestial"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Essência Ancestral é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Essência Ancestral.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "elfo_20",
+        "nome": "Ascensão Élfica",
+        "raca": "Elfo",
+        "aspectos": [
+          "celestial",
+          "arcano"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Ascensão Élfica é uma habilidade exclusiva da raça Elfo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Ascensão Élfica.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Anjo": [
+      {
+        "id": "anjo_1",
+        "nome": "Luz Sagrada",
+        "raca": "Anjo",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Luz Sagrada é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Luz Sagrada.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "anjo_2",
+        "nome": "Asas Celestiais",
+        "raca": "Anjo",
+        "aspectos": [
+          "celestial",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Asas Celestiais é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Asas Celestiais.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "anjo_3",
+        "nome": "Cura Divina",
+        "raca": "Anjo",
+        "aspectos": [
+          "espiritual",
+          "arcano"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Cura Divina é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Cura Divina.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "anjo_4",
+        "nome": "Escudo Celestial",
+        "raca": "Anjo",
+        "aspectos": [
+          "arcano",
+          "divino"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Escudo Celestial é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Escudo Celestial.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "anjo_5",
+        "nome": "Lança de Luz",
+        "raca": "Anjo",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Lança de Luz é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Lança de Luz.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "anjo_6",
+        "nome": "Benção Divina",
+        "raca": "Anjo",
+        "aspectos": [
+          "celestial",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Benção Divina é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Benção Divina.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "anjo_7",
+        "nome": "Julgamento Celestial",
+        "raca": "Anjo",
+        "aspectos": [
+          "espiritual",
+          "arcano"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Julgamento Celestial é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Julgamento Celestial.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "anjo_8",
+        "nome": "Aura Sagrada",
+        "raca": "Anjo",
+        "aspectos": [
+          "arcano",
+          "divino"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Aura Sagrada é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Aura Sagrada.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "anjo_9",
+        "nome": "Purificação",
+        "raca": "Anjo",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Purificação é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Purificação.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "anjo_10",
+        "nome": "Olhar Divino",
+        "raca": "Anjo",
+        "aspectos": [
+          "celestial",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Olhar Divino é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Olhar Divino.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "anjo_11",
+        "nome": "Espada Celestial",
+        "raca": "Anjo",
+        "aspectos": [
+          "espiritual",
+          "arcano"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Espada Celestial é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Espada Celestial.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "anjo_12",
+        "nome": "Chama Sagrada",
+        "raca": "Anjo",
+        "aspectos": [
+          "arcano",
+          "divino"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Chama Sagrada é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Chama Sagrada.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "anjo_13",
+        "nome": "Proteção dos Céus",
+        "raca": "Anjo",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Proteção dos Céus é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Proteção dos Céus.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "anjo_14",
+        "nome": "Ressurreição",
+        "raca": "Anjo",
+        "aspectos": [
+          "celestial",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Ressurreição é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Ressurreição.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "anjo_15",
+        "nome": "Domínio da Luz",
+        "raca": "Anjo",
+        "aspectos": [
+          "espiritual",
+          "arcano"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Domínio da Luz é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Domínio da Luz.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "anjo_16",
+        "nome": "Decreto Divino",
+        "raca": "Anjo",
+        "aspectos": [
+          "arcano",
+          "divino"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Decreto Divino é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Decreto Divino.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "anjo_17",
+        "nome": "Ira Celestial",
+        "raca": "Anjo",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Ira Celestial é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Ira Celestial.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "anjo_18",
+        "nome": "Milagre",
+        "raca": "Anjo",
+        "aspectos": [
+          "celestial",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Milagre é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Milagre.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "anjo_19",
+        "nome": "Apocalipse Celestial",
+        "raca": "Anjo",
+        "aspectos": [
+          "espiritual",
+          "arcano"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Apocalipse Celestial é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Apocalipse Celestial.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "anjo_20",
+        "nome": "Forma Serafim",
+        "raca": "Anjo",
+        "aspectos": [
+          "arcano",
+          "divino"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Serafim é uma habilidade exclusiva da raça Anjo, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Serafim.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Demônio": [
+      {
+        "id": "demnio_1",
+        "nome": "Chamas Infernais",
+        "raca": "Demônio",
+        "aspectos": [
+          "sombrio",
+          "infernal"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Chamas Infernais é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Chamas Infernais.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "demnio_2",
+        "nome": "Intimidação Demoníaca",
+        "raca": "Demônio",
+        "aspectos": [
+          "infernal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Intimidação Demoníaca é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Intimidação Demoníaca.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "demnio_3",
+        "nome": "Garra Abissal",
+        "raca": "Demônio",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Garra Abissal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Garra Abissal.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "demnio_4",
+        "nome": "Energia Infernal",
+        "raca": "Demônio",
+        "aspectos": [
+          "dimensional",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Energia Infernal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Energia Infernal.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "demnio_5",
+        "nome": "Marca Demoníaca",
+        "raca": "Demônio",
+        "aspectos": [
+          "sombrio",
+          "infernal"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Marca Demoníaca é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Marca Demoníaca.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "demnio_6",
+        "nome": "Correntes do Inferno",
+        "raca": "Demônio",
+        "aspectos": [
+          "infernal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Correntes do Inferno é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Correntes do Inferno.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "demnio_7",
+        "nome": "Sangue Profano",
+        "raca": "Demônio",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Sangue Profano é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Sangue Profano.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "demnio_8",
+        "nome": "Aura de Terror",
+        "raca": "Demônio",
+        "aspectos": [
+          "dimensional",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Aura de Terror é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Aura de Terror.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "demnio_9",
+        "nome": "Possessão",
+        "raca": "Demônio",
+        "aspectos": [
+          "sombrio",
+          "infernal"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Possessão é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Possessão.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "demnio_10",
+        "nome": "Teleporte Infernal",
+        "raca": "Demônio",
+        "aspectos": [
+          "infernal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Teleporte Infernal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Teleporte Infernal.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "demnio_11",
+        "nome": "Explosão Abissal",
+        "raca": "Demônio",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Explosão Abissal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Explosão Abissal.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "demnio_12",
+        "nome": "Regeneração Demoníaca",
+        "raca": "Demônio",
+        "aspectos": [
+          "dimensional",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Regeneração Demoníaca é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Regeneração Demoníaca.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "demnio_13",
+        "nome": "Invocação Infernal",
+        "raca": "Demônio",
+        "aspectos": [
+          "sombrio",
+          "infernal"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Invocação Infernal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Invocação Infernal.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "demnio_14",
+        "nome": "Domínio das Trevas",
+        "raca": "Demônio",
+        "aspectos": [
+          "infernal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Domínio das Trevas é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Domínio das Trevas.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "demnio_15",
+        "nome": "Fúria Demoníaca",
+        "raca": "Demônio",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Fúria Demoníaca é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Fúria Demoníaca.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "demnio_16",
+        "nome": "Coroa Infernal",
+        "raca": "Demônio",
+        "aspectos": [
+          "dimensional",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Coroa Infernal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Coroa Infernal.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "demnio_17",
+        "nome": "Senhor das Cinzas",
+        "raca": "Demônio",
+        "aspectos": [
+          "sombrio",
+          "infernal"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Senhor das Cinzas é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Senhor das Cinzas.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "demnio_18",
+        "nome": "Abismo Devorador",
+        "raca": "Demônio",
+        "aspectos": [
+          "infernal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Abismo Devorador é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Abismo Devorador.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "demnio_19",
+        "nome": "Apocalipse Infernal",
+        "raca": "Demônio",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Apocalipse Infernal é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Apocalipse Infernal.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "demnio_20",
+        "nome": "Forma Demoníaca",
+        "raca": "Demônio",
+        "aspectos": [
+          "dimensional",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Demoníaca é uma habilidade exclusiva da raça Demônio, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Demoníaca.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Vampiro": [
+      {
+        "id": "vampiro_1",
+        "nome": "Drenagem Vital",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sombrio",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Drenagem Vital é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Drenagem Vital.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "vampiro_2",
+        "nome": "Forma Sombria",
+        "raca": "Vampiro",
+        "aspectos": [
+          "espiritual",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Forma Sombria é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Forma Sombria.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "vampiro_3",
+        "nome": "Presas Vampíricas",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sobrenatural",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Presas Vampíricas é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Presas Vampíricas.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "vampiro_4",
+        "nome": "Névoa de Sangue",
+        "raca": "Vampiro",
+        "aspectos": [
+          "psiquico",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Névoa de Sangue é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Névoa de Sangue.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "vampiro_5",
+        "nome": "Regeneração Vampírica",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sombrio",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Regeneração Vampírica é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Regeneração Vampírica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "vampiro_6",
+        "nome": "Sentidos Noturnos",
+        "raca": "Vampiro",
+        "aspectos": [
+          "espiritual",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Sentidos Noturnos é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Sentidos Noturnos.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "vampiro_7",
+        "nome": "Dominação Mental",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sobrenatural",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Dominação Mental é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Dominação Mental.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "vampiro_8",
+        "nome": "Passo Sombrio",
+        "raca": "Vampiro",
+        "aspectos": [
+          "psiquico",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Passo Sombrio é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Passo Sombrio.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "vampiro_9",
+        "nome": "Lâmina de Sangue",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sombrio",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Lâmina de Sangue é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Lâmina de Sangue.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "vampiro_10",
+        "nome": "Correntes Carmesim",
+        "raca": "Vampiro",
+        "aspectos": [
+          "espiritual",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Correntes Carmesim é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Correntes Carmesim.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "vampiro_11",
+        "nome": "Transfusão Vital",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sobrenatural",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Transfusão Vital é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Transfusão Vital.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "vampiro_12",
+        "nome": "Exército de Morcegos",
+        "raca": "Vampiro",
+        "aspectos": [
+          "psiquico",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Exército de Morcegos é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Exército de Morcegos.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "vampiro_13",
+        "nome": "Hipnose",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sombrio",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Hipnose é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Hipnose.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "vampiro_14",
+        "nome": "Sombra Eterna",
+        "raca": "Vampiro",
+        "aspectos": [
+          "espiritual",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Sombra Eterna é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Sombra Eterna.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "vampiro_15",
+        "nome": "Banquete de Sangue",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sobrenatural",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Banquete de Sangue é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Banquete de Sangue.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "vampiro_16",
+        "nome": "Rei da Noite",
+        "raca": "Vampiro",
+        "aspectos": [
+          "psiquico",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Rei da Noite é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Rei da Noite.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "vampiro_17",
+        "nome": "Sangue Ancestral",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sombrio",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sombrio",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Sangue Ancestral é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Sangue Ancestral.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "vampiro_18",
+        "nome": "Lua Carmesim",
+        "raca": "Vampiro",
+        "aspectos": [
+          "espiritual",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Lua Carmesim é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Lua Carmesim.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "vampiro_19",
+        "nome": "Ressurreição Vampírica",
+        "raca": "Vampiro",
+        "aspectos": [
+          "sobrenatural",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Ressurreição Vampírica é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Ressurreição Vampírica.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "vampiro_20",
+        "nome": "Forma Primordial",
+        "raca": "Vampiro",
+        "aspectos": [
+          "psiquico",
+          "sombrio"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Primordial é uma habilidade exclusiva da raça Vampiro, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Primordial.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Lobisomem": [
+      {
+        "id": "lobisomem_1",
+        "nome": "Fúria Lupina",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "fisico",
+          "natural"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Fúria Lupina é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Fúria Lupina.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "lobisomem_2",
+        "nome": "Regeneração",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "natural",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Regeneração é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Regeneração.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "lobisomem_3",
+        "nome": "Sentidos Lupinos",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "sobrenatural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Sentidos Lupinos é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Sentidos Lupinos.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "lobisomem_4",
+        "nome": "Garras Selvagens",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "espiritual",
+          "fisico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Garras Selvagens é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Garras Selvagens.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "lobisomem_5",
+        "nome": "Mordida Lunar",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "fisico",
+          "natural"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Mordida Lunar é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Mordida Lunar.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "lobisomem_6",
+        "nome": "Rugido Feral",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "natural",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Rugido Feral é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Rugido Feral.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "lobisomem_7",
+        "nome": "Velocidade Bestial",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "sobrenatural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Velocidade Bestial é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Velocidade Bestial.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "lobisomem_8",
+        "nome": "Instinto Predador",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "espiritual",
+          "fisico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Instinto Predador é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Instinto Predador.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "lobisomem_9",
+        "nome": "Pele de Aço",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "fisico",
+          "natural"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Pele de Aço é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Pele de Aço.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "lobisomem_10",
+        "nome": "Caçada Noturna",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "natural",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Caçada Noturna é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Caçada Noturna.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "lobisomem_11",
+        "nome": "Uivo da Lua",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "sobrenatural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Uivo da Lua é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Uivo da Lua.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "lobisomem_12",
+        "nome": "Força Ancestral",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "espiritual",
+          "fisico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Força Ancestral é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Força Ancestral.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "lobisomem_13",
+        "nome": "Forma Alfa",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "fisico",
+          "natural"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Forma Alfa é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Forma Alfa.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "lobisomem_14",
+        "nome": "Matilha Espiritual",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "natural",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Matilha Espiritual é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Matilha Espiritual.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "lobisomem_15",
+        "nome": "Fúria da Lua",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "sobrenatural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Fúria da Lua é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Fúria da Lua.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "lobisomem_16",
+        "nome": "Regeneração Suprema",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "espiritual",
+          "fisico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Regeneração Suprema é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Regeneração Suprema.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "lobisomem_17",
+        "nome": "Predador Absoluto",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "fisico",
+          "natural"
+        ],
+        "aspectoPrincipal": "fisico",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Predador Absoluto é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Predador Absoluto.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "lobisomem_18",
+        "nome": "Lua Sangrenta",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "natural",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Lua Sangrenta é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Lua Sangrenta.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "lobisomem_19",
+        "nome": "Espírito Lupino",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "sobrenatural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Espírito Lupino é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Espírito Lupino.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "lobisomem_20",
+        "nome": "Forma Fenrir",
+        "raca": "Lobisomem",
+        "aspectos": [
+          "espiritual",
+          "fisico"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Fenrir é uma habilidade exclusiva da raça Lobisomem, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Fenrir.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Fada": [
+      {
+        "id": "fada_1",
+        "nome": "Magia Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Magia Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Magia Feérica.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "fada_2",
+        "nome": "Pó Encantado",
+        "raca": "Fada",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Pó Encantado é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Pó Encantado.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "fada_3",
+        "nome": "Luz Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "espiritual",
+          "elemental"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Luz Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Luz Feérica.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "fada_4",
+        "nome": "Flor Encantada",
+        "raca": "Fada",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Flor Encantada é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Flor Encantada.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "fada_5",
+        "nome": "Cura Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Cura Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Cura Feérica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "fada_6",
+        "nome": "Ilusão Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Ilusão Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Ilusão Feérica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "fada_7",
+        "nome": "Voo Mágico",
+        "raca": "Fada",
+        "aspectos": [
+          "espiritual",
+          "elemental"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Voo Mágico é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Voo Mágico.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "fada_8",
+        "nome": "Encanto Natural",
+        "raca": "Fada",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Encanto Natural é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Encanto Natural.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "fada_9",
+        "nome": "Semente Mística",
+        "raca": "Fada",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Semente Mística é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Semente Mística.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "fada_10",
+        "nome": "Dança das Fadas",
+        "raca": "Fada",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Dança das Fadas é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Dança das Fadas.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "fada_11",
+        "nome": "Lança Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "espiritual",
+          "elemental"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Lança Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Lança Feérica.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "fada_12",
+        "nome": "Barreira Encantada",
+        "raca": "Fada",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Barreira Encantada é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Barreira Encantada.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "fada_13",
+        "nome": "Reino Feérico",
+        "raca": "Fada",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Reino Feérico é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Reino Feérico.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "fada_14",
+        "nome": "Espírito da Primavera",
+        "raca": "Fada",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Espírito da Primavera é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Espírito da Primavera.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "fada_15",
+        "nome": "Tempestade Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "espiritual",
+          "elemental"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Tempestade Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Tempestade Feérica.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "fada_16",
+        "nome": "Sono Encantado",
+        "raca": "Fada",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Sono Encantado é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Sono Encantado.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "fada_17",
+        "nome": "Magia Ancestral",
+        "raca": "Fada",
+        "aspectos": [
+          "arcano",
+          "natural"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Magia Ancestral é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Magia Ancestral.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "fada_18",
+        "nome": "Coroa Feérica",
+        "raca": "Fada",
+        "aspectos": [
+          "natural",
+          "espiritual"
+        ],
+        "aspectoPrincipal": "natural",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Coroa Feérica é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Coroa Feérica.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "fada_19",
+        "nome": "Milagre Feérico",
+        "raca": "Fada",
+        "aspectos": [
+          "espiritual",
+          "elemental"
+        ],
+        "aspectoPrincipal": "espiritual",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Milagre Feérico é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Milagre Feérico.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "fada_20",
+        "nome": "Forma Arquifada",
+        "raca": "Fada",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Arquifada é uma habilidade exclusiva da raça Fada, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Arquifada.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Dragão": [
+      {
+        "id": "drago_1",
+        "nome": "Sopro Elemental",
+        "raca": "Dragão",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Sopro Elemental é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Sopro Elemental.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "drago_2",
+        "nome": "Escamas Dracônicas",
+        "raca": "Dragão",
+        "aspectos": [
+          "arcano",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Escamas Dracônicas é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Escamas Dracônicas.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "drago_3",
+        "nome": "Garras Dracônicas",
+        "raca": "Dragão",
+        "aspectos": [
+          "cosmico",
+          "infernal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Garras Dracônicas é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Garras Dracônicas.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "drago_4",
+        "nome": "Rugido do Dragão",
+        "raca": "Dragão",
+        "aspectos": [
+          "infernal",
+          "elemental"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Rugido do Dragão é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Rugido do Dragão.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "drago_5",
+        "nome": "Voo Dracônico",
+        "raca": "Dragão",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Voo Dracônico é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Voo Dracônico.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "drago_6",
+        "nome": "Sangue Dracônico",
+        "raca": "Dragão",
+        "aspectos": [
+          "arcano",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Sangue Dracônico é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Sangue Dracônico.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "drago_7",
+        "nome": "Chama Dracônica",
+        "raca": "Dragão",
+        "aspectos": [
+          "cosmico",
+          "infernal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Chama Dracônica é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Chama Dracônica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "drago_8",
+        "nome": "Presença Dracônica",
+        "raca": "Dragão",
+        "aspectos": [
+          "infernal",
+          "elemental"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Presença Dracônica é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Presença Dracônica.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "drago_9",
+        "nome": "Cauda Devastadora",
+        "raca": "Dragão",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Cauda Devastadora é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Cauda Devastadora.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "drago_10",
+        "nome": "Armadura Dracônica",
+        "raca": "Dragão",
+        "aspectos": [
+          "arcano",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Armadura Dracônica é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Armadura Dracônica.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "drago_11",
+        "nome": "Sopro Congelante",
+        "raca": "Dragão",
+        "aspectos": [
+          "cosmico",
+          "infernal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Sopro Congelante é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Sopro Congelante.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "drago_12",
+        "nome": "Sopro Tempestuoso",
+        "raca": "Dragão",
+        "aspectos": [
+          "infernal",
+          "elemental"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Sopro Tempestuoso é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Sopro Tempestuoso.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "drago_13",
+        "nome": "Sopro Abissal",
+        "raca": "Dragão",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Sopro Abissal é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Sopro Abissal.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "drago_14",
+        "nome": "Domínio Elemental",
+        "raca": "Dragão",
+        "aspectos": [
+          "arcano",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Domínio Elemental é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Domínio Elemental.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "drago_15",
+        "nome": "Espírito Dracônico",
+        "raca": "Dragão",
+        "aspectos": [
+          "cosmico",
+          "infernal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Espírito Dracônico é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Espírito Dracônico.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "drago_16",
+        "nome": "Fúria Dracônica",
+        "raca": "Dragão",
+        "aspectos": [
+          "infernal",
+          "elemental"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Fúria Dracônica é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Fúria Dracônica.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "drago_17",
+        "nome": "Rei dos Dragões",
+        "raca": "Dragão",
+        "aspectos": [
+          "elemental",
+          "arcano"
+        ],
+        "aspectoPrincipal": "elemental",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Rei dos Dragões é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Rei dos Dragões.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "drago_18",
+        "nome": "Cataclismo",
+        "raca": "Dragão",
+        "aspectos": [
+          "arcano",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "arcano",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Cataclismo é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Cataclismo.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "drago_19",
+        "nome": "Dragão Primordial",
+        "raca": "Dragão",
+        "aspectos": [
+          "cosmico",
+          "infernal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Dragão Primordial é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Dragão Primordial.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "drago_20",
+        "nome": "Forma Dragão Ancestral",
+        "raca": "Dragão",
+        "aspectos": [
+          "infernal",
+          "elemental"
+        ],
+        "aspectoPrincipal": "infernal",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Dragão Ancestral é uma habilidade exclusiva da raça Dragão, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Dragão Ancestral.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Deus": [
+      {
+        "id": "deus_1",
+        "nome": "Autoridade Divina",
+        "raca": "Deus",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Autoridade Divina é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Autoridade Divina.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "deus_2",
+        "nome": "Domínio Celestial",
+        "raca": "Deus",
+        "aspectos": [
+          "celestial",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Domínio Celestial é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Domínio Celestial.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "deus_3",
+        "nome": "Decreto Divino",
+        "raca": "Deus",
+        "aspectos": [
+          "cosmico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Decreto Divino é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Decreto Divino.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "deus_4",
+        "nome": "Criação",
+        "raca": "Deus",
+        "aspectos": [
+          "temporal",
+          "divino"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Criação é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Criação.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "deus_5",
+        "nome": "Destruição",
+        "raca": "Deus",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Destruição é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Destruição.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "deus_6",
+        "nome": "Onisciência",
+        "raca": "Deus",
+        "aspectos": [
+          "celestial",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Onisciência é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Onisciência.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "deus_7",
+        "nome": "Presença Divina",
+        "raca": "Deus",
+        "aspectos": [
+          "cosmico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Presença Divina é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Presença Divina.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "deus_8",
+        "nome": "Milagre",
+        "raca": "Deus",
+        "aspectos": [
+          "temporal",
+          "divino"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Milagre é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Milagre.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "deus_9",
+        "nome": "Julgamento Divino",
+        "raca": "Deus",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Julgamento Divino é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Julgamento Divino.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "deus_10",
+        "nome": "Luz Primordial",
+        "raca": "Deus",
+        "aspectos": [
+          "celestial",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Luz Primordial é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Luz Primordial.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "deus_11",
+        "nome": "Tempo Divino",
+        "raca": "Deus",
+        "aspectos": [
+          "cosmico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Tempo Divino é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Tempo Divino.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "deus_12",
+        "nome": "Espaço Divino",
+        "raca": "Deus",
+        "aspectos": [
+          "temporal",
+          "divino"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Espaço Divino é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Espaço Divino.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "deus_13",
+        "nome": "Domínio Elemental",
+        "raca": "Deus",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Domínio Elemental é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Domínio Elemental.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "deus_14",
+        "nome": "Alma Divina",
+        "raca": "Deus",
+        "aspectos": [
+          "celestial",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Alma Divina é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Alma Divina.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "deus_15",
+        "nome": "Imortalidade",
+        "raca": "Deus",
+        "aspectos": [
+          "cosmico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Imortalidade é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Imortalidade.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "deus_16",
+        "nome": "Reino Celestial",
+        "raca": "Deus",
+        "aspectos": [
+          "temporal",
+          "divino"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Reino Celestial é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Reino Celestial.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "deus_17",
+        "nome": "Ira dos Deuses",
+        "raca": "Deus",
+        "aspectos": [
+          "divino",
+          "celestial"
+        ],
+        "aspectoPrincipal": "divino",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Ira dos Deuses é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Ira dos Deuses.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "deus_18",
+        "nome": "Apocalipse Divino",
+        "raca": "Deus",
+        "aspectos": [
+          "celestial",
+          "cosmico"
+        ],
+        "aspectoPrincipal": "celestial",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Apocalipse Divino é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Apocalipse Divino.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "deus_19",
+        "nome": "Poder Absoluto",
+        "raca": "Deus",
+        "aspectos": [
+          "cosmico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "cosmico",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Poder Absoluto é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Poder Absoluto.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "deus_20",
+        "nome": "Forma Divina",
+        "raca": "Deus",
+        "aspectos": [
+          "temporal",
+          "divino"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Forma Divina é uma habilidade exclusiva da raça Deus, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Forma Divina.",
+        "requisito": "Nível 40"
+      }
+    ],
+    "Sobrenatural": [
+      {
+        "id": "sobrenatural_1",
+        "nome": "Percepção Sobrenatural",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Passiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Percepção Sobrenatural é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Percepção Sobrenatural.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "sobrenatural_2",
+        "nome": "Manifestação",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "dimensional",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Ofensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Manifestação é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Manifestação.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "sobrenatural_3",
+        "nome": "Energia Oculta",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "psiquico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Defensiva",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Energia Oculta é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Energia Oculta.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "sobrenatural_4",
+        "nome": "Telecinese",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "temporal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Telecinese é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Telecinese.",
+        "requisito": "Nenhum"
+      },
+      {
+        "id": "sobrenatural_5",
+        "nome": "Telepatia",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Controle",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Telepatia é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Telepatia.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "sobrenatural_6",
+        "nome": "Manipulação Espiritual",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "dimensional",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Suporte",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Manipulação Espiritual é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Manipulação Espiritual.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "sobrenatural_7",
+        "nome": "Forma Etérea",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "psiquico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Transformação",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Forma Etérea é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Forma Etérea.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "sobrenatural_8",
+        "nome": "Portal Dimensional",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "temporal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Mágica",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Portal Dimensional é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Portal Dimensional.",
+        "requisito": "Nível 10"
+      },
+      {
+        "id": "sobrenatural_9",
+        "nome": "Visão Astral",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Passiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Visão Astral é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Visão Astral.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "sobrenatural_10",
+        "nome": "Absorção Sobrenatural",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "dimensional",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Ofensiva",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Absorção Sobrenatural é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Absorção Sobrenatural.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "sobrenatural_11",
+        "nome": "Barreira Oculta",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "psiquico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Defensiva",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Barreira Oculta é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Barreira Oculta.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "sobrenatural_12",
+        "nome": "Projeção Astral",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "temporal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Comum",
+        "custo": 100,
+        "descricao": "Projeção Astral é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Projeção Astral.",
+        "requisito": "Nível 20"
+      },
+      {
+        "id": "sobrenatural_13",
+        "nome": "Distorção da Realidade",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Controle",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Distorção da Realidade é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Permite controlar, limitar ou alterar uma ação do alvo através de Distorção da Realidade.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "sobrenatural_14",
+        "nome": "Controle Psíquico",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "dimensional",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Suporte",
+        "raridade": "Incomum",
+        "custo": 100,
+        "descricao": "Controle Psíquico é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Fortalece o usuário ou seus aliados através de Controle Psíquico.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "sobrenatural_15",
+        "nome": "Ruptura Dimensional",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "psiquico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Transformação",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Ruptura Dimensional é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Altera temporariamente o estado do personagem através de Ruptura Dimensional.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "sobrenatural_16",
+        "nome": "Existência Etérea",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "temporal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Mágica",
+        "raridade": "Rara",
+        "custo": 100,
+        "descricao": "Existência Etérea é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Canaliza energia sobrenatural para produzir o efeito de Existência Etérea.",
+        "requisito": "Nível 30"
+      },
+      {
+        "id": "sobrenatural_17",
+        "nome": "Domínio Sobrenatural",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "sobrenatural",
+          "dimensional"
+        ],
+        "aspectoPrincipal": "sobrenatural",
+        "tipo": "Passiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Domínio Sobrenatural é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Aumenta permanentemente uma característica do personagem relacionada a Domínio Sobrenatural.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "sobrenatural_18",
+        "nome": "Colapso Dimensional",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "dimensional",
+          "psiquico"
+        ],
+        "aspectoPrincipal": "dimensional",
+        "tipo": "Ofensiva",
+        "raridade": "Épica",
+        "custo": 100,
+        "descricao": "Colapso Dimensional é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Causa dano adicional ao inimigo através de Colapso Dimensional.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "sobrenatural_19",
+        "nome": "Singularidade",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "psiquico",
+          "temporal"
+        ],
+        "aspectoPrincipal": "psiquico",
+        "tipo": "Defensiva",
+        "raridade": "Lendária",
+        "custo": 100,
+        "descricao": "Singularidade é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Reduz o dano recebido através do poder de Singularidade.",
+        "requisito": "Nível 40"
+      },
+      {
+        "id": "sobrenatural_20",
+        "nome": "Transcendência",
+        "raca": "Sobrenatural",
+        "aspectos": [
+          "temporal",
+          "sobrenatural"
+        ],
+        "aspectoPrincipal": "temporal",
+        "tipo": "Especial",
+        "raridade": "Mítica",
+        "custo": 100,
+        "descricao": "Transcendência é uma habilidade exclusiva da raça Sobrenatural, permitindo ao usuário manifestar uma característica única de seu poder.",
+        "efeito": "Concede um efeito especial baseado em Transcendência.",
+        "requisito": "Nível 40"
+      }
+    ]
+  }
+}

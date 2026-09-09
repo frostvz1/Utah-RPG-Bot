@@ -1,0 +1,142 @@
+{
+  "despertar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/despertar-1788567583197.mp4",
+    "updatedAt": 1788567583200
+  },
+  "menu": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/menu.mp4",
+    "updatedAt": 1788568379993
+  },
+  "status": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/status.mp4",
+    "updatedAt": 1788568960701
+  },
+  "iniciar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/iniciar.mp4",
+    "updatedAt": 1788569102461
+  },
+  "habilidade": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/habilidade.mp4",
+    "updatedAt": 1788569118434
+  },
+  "atacar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/atacar.mp4",
+    "updatedAt": 1788569259824
+  },
+  "boss": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/boss.mp4",
+    "updatedAt": 1788569317078
+  },
+  "sucesso": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/sucesso.mp4",
+    "updatedAt": 1788569345728
+  },
+  "magia": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/magia.mp4",
+    "updatedAt": 1788569366847
+  },
+  "vitoria": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/vitoria.mp4",
+    "updatedAt": 1788570474133
+  },
+  "descansar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/descansar.mp4",
+    "updatedAt": 1788571363717
+  },
+  "item": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/item.mp4",
+    "updatedAt": 1788571943746
+  },
+  "item_comprar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/item_comprar.mp4",
+    "updatedAt": 1788571955979
+  },
+  "loja": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/loja.mp4",
+    "updatedAt": 1788571965383
+  },
+  "item_usar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/item_usar.mp4",
+    "updatedAt": 1788571984020
+  },
+  "hospital": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/hospital.mp4",
+    "updatedAt": 1788571992362
+  },
+  "regeneracao": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/regeneracao.mp4",
+    "updatedAt": 1788572058939
+  },
+  "mercado": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/mercado.mp4",
+    "updatedAt": 1788572118243
+  },
+  "banco": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/banco.mp4",
+    "updatedAt": 1788572215654
+  },
+  "perfil": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/perfil.mp4",
+    "updatedAt": 1788573000325
+  },
+  "classe": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/classe.mp4",
+    "updatedAt": 1788573021797
+  },
+  "aventura": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/aventura.mp4",
+    "updatedAt": 1788573043682
+  },
+  "explorar": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/explorar.mp4",
+    "updatedAt": 1788573065849
+  },
+  "mapa": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/mapa.mp4",
+    "updatedAt": 1788573077666
+  },
+  "defesa": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/defesa.mp4",
+    "updatedAt": 1788573088656
+  },
+  "fuga": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/fuga.mp4",
+    "updatedAt": 1788573129571
+  },
+  "derrota": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/derrota.mp4",
+    "updatedAt": 1788573144811
+  },
+  "levelup": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/levelup.mp4",
+    "updatedAt": 1788573159605
+  },
+  "inventario": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/inventario.mp4",
+    "updatedAt": 1788573175063
+  },
+  "missao": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/missao.mp4",
+    "updatedAt": 1788573185489
+  },
+  "guilda": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/guilda.mp4",
+    "updatedAt": 1788573190389
+  },
+  "ranking": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/ranking.mp4",
+    "updatedAt": 1788573197065
+  },
+  "erro": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/erro.mp4",
+    "updatedAt": 1788573239461
+  },
+  "perfil_editar_raca": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/perfil_editar_raca.mp4",
+    "updatedAt": 1788582372573
+  },
+  "perfil_editar_habilidade": {
+    "file": "/data/data/com.termux/files/home/UTAH-RPG/media/gifs/perfil_editar_habilidade.mp4",
+    "updatedAt": 1788582420604
+  }
+}

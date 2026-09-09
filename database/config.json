@@ -1,0 +1,79 @@
+{
+  "name": "𝐒𝐮𝐛 𝐖𝐨𝐫𝐥𝐝 𝐑𝐏𝐆",
+  "prefix": ";",
+  "version": "1.0.0",
+  "description": "𝐔𝐌 𝐑𝐏𝐆 𝐃𝐎 𝐌𝐔𝐍𝐃𝐎 𝐒𝐎𝐁𝐑𝐄𝐍𝐀𝐓𝐔𝐑𝐀𝐋 𝐏𝐀𝐑𝐀 𝐃𝐈𝐕𝐄𝐑𝐒𝐀̃𝐎, 𝐀𝐕𝐄𝐍𝐓𝐔𝐑𝐀, 𝐄 𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋𝐌𝐄𝐍𝐓𝐄, 𝐎 𝐓𝐄𝐒𝐓𝐄 𝐃𝐄 𝐇𝐀𝐁𝐈𝐋𝐈𝐃𝐀𝐃𝐄𝐒 𝐃𝐄 𝐂𝐀𝐃𝐀 𝐈𝐍𝐃𝐈𝐕𝐈́𝐃𝐔𝐎. 𝐐𝐔𝐄𝐌 𝐒𝐎𝐁𝐑𝐄𝐕𝐈𝐕𝐄𝐑𝐀́? 𝐒𝐄𝐑𝐀́ 𝐔𝐌, 𝐎𝐔 𝐔𝐌𝐀 𝐆𝐔𝐈𝐋𝐃𝐀? 𝐓𝐄𝐒𝐓𝐄 𝐄 𝐃𝐄𝐒𝐂𝐔𝐁𝐑𝐀...",
+  "image": null,
+  "enabled": true,
+  "maintenance": false,
+  "gifs": {
+    "enabled": true
+  },
+  "combat": {
+    "enabled": true,
+    "criticalEnabled": true
+  },
+  "economy": {
+    "enabled": true,
+    "startingCoins": 100
+  },
+  "group": {
+    "enabled": true
+  },
+  "messages": {
+    "welcome": {
+      "enabled": true,
+      "text": "Bem-vindo, {user}!\n\nVocê entrou no {name}."
+    },
+    "leave": {
+      "enabled": true,
+      "text": "{user} saiu do grupo."
+    },
+    "commandNotFound": {
+      "enabled": true,
+      "text": "Comando não encontrado.\n\nUse {prefix}menu para visualizar os comandos."
+    },
+    "internalError": {
+      "enabled": true,
+      "text": "Ocorreu um erro ao executar o comando."
+    },
+    "permissionDenied": {
+      "enabled": true,
+      "text": "Acesso negado.\n\nVocê não possui permissão para utilizar este comando."
+    },
+    "maintenance": {
+      "enabled": true,
+      "text": "{name} está em manutenção no momento."
+    },
+    "disabled": {
+      "enabled": true,
+      "text": "O sistema do {name} está temporariamente desativado."
+    },
+    "notRegistered": {
+      "enabled": true,
+      "text": "Você ainda não possui um personagem.\n\nUse {prefix}iniciar para começar."
+    },
+    "alreadyRegistered": {
+      "enabled": true,
+      "text": "Você já possui um personagem.\n\nUse {prefix}perfil para visualizar sua ficha."
+    },
+    "victory": {
+      "enabled": true,
+      "text": "Vitória!"
+    },
+    "defeat": {
+      "enabled": true,
+      "text": "Você foi derrotado."
+    },
+    "levelUp": {
+      "enabled": true,
+      "text": "Você subiu para o nível {level}!"
+    },
+    "errors": true
+  },
+  "menu": {
+    "enabled": true,
+    "custom": true,
+    "text": "╔════════════════════════════╗\n𝐒𝐮𝐛 𝐖𝐨𝐫𝐥𝐝 𝐑𝐏𝐆\n╚════════════════════════════╝\n\n;\n\n𝐃𝐚𝐝𝐨𝐬 𝐝𝐨 𝐂𝐫𝐢𝐚𝐝𝐨𝐫\n𝐒𝐚𝐞𝐥 (𝟕𝟓𝟗𝟗𝟏𝟏𝟗𝟎𝟗𝟕𝟐)\n𝐈𝐠: 𝐝_𝐚𝐫𝐭𝐳𝟏𝟖\n𝐓𝐭𝐤: 𝐦𝐮𝐤𝐚_𝐬𝐱\n\n𝐷𝑢́𝑣𝑖𝑑𝑎𝑠, 𝑝𝑒𝑑𝑖𝑑𝑜𝑠, 𝑎𝑙𝑢𝑔𝑢𝑒́𝑖𝑠 𝑑𝑒 𝐵𝑂𝑇𝑠 𝑜𝑢 𝑞𝑢𝑎𝑙𝑞𝑢𝑒𝑟 𝑜𝑢𝑡𝑟𝑎 𝑖𝑛𝑓𝑜𝑟𝑚𝑎𝑐̧𝑎̃𝑜, 𝑐𝑜𝑛𝑡𝑎𝑡𝑒 𝑞𝑢𝑎𝑙𝑞𝑢𝑒𝑟 𝑟𝑒𝑑𝑒 𝑠𝑜𝑐𝑖𝑎𝑙 𝑎𝑐𝑖𝑚𝑎.\n𝑁𝑎̃𝑜 𝑏𝑢𝑟𝑙𝑒 𝑜 𝑠𝑖𝑠𝑡𝑒𝑚𝑎, 𝑠𝑒 𝑗𝑢𝑛𝑡𝑒 𝑎 𝑒𝑙𝑒!\n\n━━━━━━━━━━━━━━━━━━━━\n𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐆𝐄𝐌\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐢𝐧𝐢𝐜𝐢𝐚𝐫\n;𝐩𝐞𝐫𝐟𝐢𝐥\n;𝐦𝐞𝐮𝐩𝐞𝐫𝐟𝐢𝐥\n;𝐬𝐭𝐚𝐭𝐮𝐬\n;𝐜𝐥𝐚𝐬𝐬𝐞\n;𝐝𝐞𝐬𝐩𝐞𝐫𝐭𝐚𝐫\n\n━━━━━━━━━━━━━━━━━━━━\n𝐀𝐕𝐄𝐍𝐓𝐔𝐑𝐀\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐚𝐯𝐞𝐧𝐭𝐮𝐫𝐚 𝐞𝐱𝐩𝐥𝐨𝐫𝐚𝐫\n;𝐚𝐯𝐞𝐧𝐭𝐮𝐫𝐚 𝐦𝐚𝐩𝐚\n\n━━━━━━━━━━━━━━━━━━━━\n𝐂𝐎𝐌𝐁𝐀𝐓𝐄\n━━━━━━━━━━━━━━━━━━━━\n\n𝐏𝐯𝐄\n;𝐚𝐭𝐚𝐜𝐚𝐫\n\n𝐏𝐯𝐏\n;𝐜𝐨𝐦𝐛𝐚𝐭𝐞 @𝐮𝐬𝐮𝐚́𝐫𝐢𝐨\n;𝐜𝐨𝐦𝐛𝐚𝐭𝐞 @𝐮𝐬𝐮𝐚́𝐫𝐢𝐨 𝐡𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝𝐞 𝟏\n\n𝐇𝐀𝐁𝐈𝐋𝐈𝐃𝐀𝐃𝐄𝐒\n;𝐡𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝𝐞\n;𝐡𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝𝐞 𝐫𝐞𝐦𝐨𝐯𝐞𝐫 𝟏\n\n━━━━━━━━━━━━━━━━━━━━\n𝐑𝐄𝐂𝐔𝐏𝐄𝐑𝐀𝐂̧𝐀̃𝐎\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐝𝐞𝐬𝐜𝐚𝐧𝐬𝐚𝐫\n;𝐡𝐨𝐬𝐩𝐢𝐭𝐚𝐥\n\n━━━━━━━━━━━━━━━━━━━━\n𝐈𝐍𝐕𝐄𝐍𝐓𝐀́𝐑𝐈𝐎\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐢𝐭𝐞𝐦\n;𝐢𝐭𝐞𝐦 𝐮𝐬𝐚𝐫 <𝐢𝐭𝐞𝐦>\n;𝐥𝐨𝐣𝐚\n\n━━━━━━━━━━━━━━━━━━━━\n𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐭𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐢𝐫 <𝐮𝐬𝐮𝐚́𝐫𝐢𝐨> <𝐯𝐚𝐥𝐨𝐫>\n\n━━━━━━━━━━━━━━━━━━━━\n𝐑𝐀𝐍𝐊𝐈𝐍𝐆𝐒\n━━━━━━━━━━━━━━━━━━━━\n\n𝐉𝐎𝐆𝐀𝐃𝐎𝐑𝐄𝐒\n;𝐫𝐚𝐧𝐤𝐢𝐧𝐠\n\n𝐆𝐔𝐈𝐋𝐃𝐀𝐒\n;𝐫𝐚𝐧𝐤𝐠\n\n━━━━━━━━━━━━━━━━━━━━\n𝐆𝐔𝐈𝐋𝐃𝐀𝐒\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐜𝐫𝐢𝐚𝐫𝐠𝐮𝐢𝐥𝐝𝐚 <𝐧𝐨𝐦𝐞>\n;𝐠𝐮𝐢𝐥𝐝𝐚\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐦𝐞𝐦𝐛𝐫𝐨𝐬\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐦𝐚𝐫𝐜𝐚𝐫\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐜𝐨𝐧𝐯𝐢𝐭𝐞\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐜𝐨𝐧𝐯𝐢𝐭𝐞𝐬\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐚𝐜𝐞𝐢𝐭𝐚𝐫 <𝐢𝐝>\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐫𝐞𝐜𝐮𝐬𝐚𝐫 <𝐢𝐝>\n;𝐠𝐮𝐢𝐥𝐝𝐚 𝐯𝐢𝐧𝐜𝐮𝐥𝐚𝐫\n\n━━━━━━━━━━━━━━━━━━━━\n𝐎𝐔𝐓𝐑𝐎𝐒\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐠𝐢𝐟\n;𝐭𝐞𝐬𝐭𝐞𝐠𝐢𝐟\n\n━━━━━━━━━━━━━━━━━━━━\n𝐀𝐃𝐌𝐈𝐍𝐈𝐒𝐓𝐑𝐀𝐂̧𝐀̃𝐎\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐜𝐨𝐧𝐟𝐢𝐠 — 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜̧𝐨̃𝐞𝐬 (𝐀𝐃𝐌)\n;𝐜𝐨𝐧𝐟𝐢𝐠𝐨𝐰𝐧𝐞𝐫 — 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜̧𝐨̃𝐞𝐬 𝐝𝐨 𝐎𝐰𝐧𝐞𝐫\n\n━━━━━━━━━━━━━━━━━━━━\n𝐃𝐄𝐒𝐏𝐄𝐑𝐓𝐀𝐑\n━━━━━━━━━━━━━━━━━━━━\n\n;𝐝𝐞𝐬𝐩𝐞𝐫𝐭𝐚𝐫\n\n𝐑𝐞𝐪𝐮𝐢𝐬𝐢𝐭𝐨: 𝐧𝐢́𝐯𝐞𝐥 𝟐𝟎𝟎"
+  }
+}
