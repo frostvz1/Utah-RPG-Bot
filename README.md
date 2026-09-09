@@ -2,7 +2,7 @@
   <img src="assets/Utah-RPG-git.jpg" alt="UTAH-RPG Bot" width="700">
 </p>
 
-# # UTAH-RPG Bot
+# UTAH-RPG Bot
 
 Framework e base de desenvolvimento para bots e sistemas de RPG.
 
