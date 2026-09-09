@@ -2,7 +2,7 @@
 
 Framework e base de desenvolvimento para bots e sistemas de RPG.
 
-Desenvolvido por Utah Frost.
+Desenvolvido por Utah Frost & Riven Void
 
 ---
 
